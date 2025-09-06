@@ -3,7 +3,7 @@ import { ConfigProvider } from './context/ConfigContext';
 import { AuthProvider } from './context/AuthContext';
 import { OfflineProvider } from './context/OfflineContext';
 import Home from './pages/Home';
-import './App.css';
+// Suppression de l'import inexistant : import './App.css';
 
 function App() {
   return (
