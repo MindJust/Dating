@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
-import './index.css';
+// Suppression de l'import inexistant : import './index.css';
 
 // Enregistrer le service worker pour le support PWA
 if ('serviceWorker' in navigator) {
