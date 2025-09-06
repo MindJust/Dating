@@ -113,19 +113,8 @@ io.on('connection', (socket) => {
 // Synchronisation de la base de données et démarrage du serveur
 const PORT = process.env.PORT || 3001;
 
-sequelize.authenticate()
-  .then(() => {
-    console.log('Database connection has been established successfully.');
-    return sequelize.sync();
-  })
-  .then(() => {
-    server.listen(PORT, () => {
-      console.log(`Nexus Core API is running on port ${PORT}`);
-    });
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-    process.exit(1);
-  });
+server.listen(PORT, () => {
+  console.log(`Nexus Core API is running on port ${PORT}`);
+});
 
 module.exports = { app, io };
